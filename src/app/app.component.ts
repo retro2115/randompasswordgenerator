@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'randompasswordgenerator';
 
-  passwordlength = '';
+  passwordLength = 0;
+  generatedPassword = '';
 
+  getPasswordLength(value: string) {
+	let inputValue = parseInt(value);
+	if (typeof(inputValue) === 'number') {
+		this.passwordLength = inputValue;
+	}
+	console.log(inputValue)
+  }
   onChangeIncludeLetters() {
 
   };
@@ -20,6 +28,4 @@ export class AppComponent {
 
   };
 
-
-  
 }

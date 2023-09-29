@@ -2,13 +2,8 @@
 <h1>Random passwoprd generator</h1>
 <div>
 	<label for="">Input password length
-		<input type="text">
+		<input type="text" (input)="getPasswordLength($any($event.target).value)">
 	</label>	
-</div>
-<div>
-	<label for="">Input password length
-		<input type="text">
-	</label>
 </div>
 
 <div>
@@ -31,7 +26,7 @@
 
 <div>
 	<label for="">Your generated password
-		<input type="text">
+		<input type="text" [value]="generatedPassword">
 	</label>	
 </div>
 
