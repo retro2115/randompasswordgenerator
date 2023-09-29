@@ -9,5 +9,17 @@ export class AppComponent {
   title = 'randompasswordgenerator';
 
   passwordlength = '';
+
+  onChangeIncludeLetters() {
+
+  };
+  onChangeIncludeNumbers() {
+
+  };
+  onChangeIncludeSymbols() {
+
+  };
+
+
   
 }
