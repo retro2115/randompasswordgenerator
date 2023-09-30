@@ -31,4 +31,18 @@ export class AppComponent {
 	this.includeSymbols = !this.includeSymbols;
   };
 
+  generatePassword() {
+	let lettersPool = 'abcdefghijklmnopqrstuVwxyz';
+	let numbersPool = '1234567890';
+	let symbolsPool = '1!"#$%&/()=?*';
+	let passwordPool = '';
+	if (this.includeLetters) {
+		passwordPool += lettersPool;
+	}
+	if (numbersPool) {
+		passwordPool += numbersPool;
+	} 
+
+
+  }
 }

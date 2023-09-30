@@ -1,5 +1,5 @@
 
-<h1>Random passwoprd generator</h1>
+<h1>Random password generator</h1>
 <div>
 	<label for="">Input password length
 		<input type="text" (input)="getPasswordLength($any($event.target).value)">
@@ -7,7 +7,7 @@
 </div>
 
 <div>
-	<label for="">Include letters
+	<label for="">Include Letters
 		<input type="checkbox" (change)="onChangeIncludeLetters()">
 	</label>
 </div>
@@ -22,6 +22,10 @@
 	<label for="">Include Symbols
 		<input type="checkbox" (change)="onChangeIncludeSymbols()">
 	</label>
+</div>
+
+<div>
+	<button>Generate password</button>
 </div>
 
 <div>
