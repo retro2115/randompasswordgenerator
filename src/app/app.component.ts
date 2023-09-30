@@ -42,7 +42,13 @@ export class AppComponent {
 	if (numbersPool) {
 		passwordPool += numbersPool;
 	} 
+	if (this.includeSymbols) {
+		passwordPool += symbolsPool;
+	}
 
-
+	for (let i = 0; i < this.passwordLength; i++ ) {
+		let index = Math.floor(Math.random() * passwordPool.length);
+		this.generatedPassword += passwordPool[index];
+	}
   }
 }
