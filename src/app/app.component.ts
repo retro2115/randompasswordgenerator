@@ -36,19 +36,23 @@ export class AppComponent {
 	let numbersPool = '1234567890';
 	let symbolsPool = '1!"#$%&/()=?*';
 	let passwordPool = '';
+	
 	if (this.includeLetters) {
 		passwordPool += lettersPool;
 	}
-	if (numbersPool) {
+	if (this.includeNumbers) {
 		passwordPool += numbersPool;
 	} 
 	if (this.includeSymbols) {
 		passwordPool += symbolsPool;
 	}
 
+
 	for (let i = 0; i < this.passwordLength; i++ ) {
 		let index = Math.floor(Math.random() * passwordPool.length);
 		this.generatedPassword += passwordPool[index];
 	}
+
+	
   }
 }

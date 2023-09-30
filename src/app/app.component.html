@@ -25,10 +25,10 @@
 </div>
 
 <div>
-	<button (click)="generatePassword()">Generate password</button>
+	<button [disabled]="!(passwordLength && (includeLetters || includeNumbers || includeSymbols )) " (click)="generatePassword()">Generate password</button>
 </div>
 
-<div>
+<div *ngIf="generatedPassword">
 	<label for="">Your generated password
 		<input type="text" [value]="generatedPassword">
 	</label>	
